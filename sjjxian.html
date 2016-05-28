@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/jquery.fullPage.css">
+			<link rel="stylesheet" href="css/animate.min.css" />
+			<link href="css/lightbox.css" rel="stylesheet" />
+			<style type="text/css">
+				*{margin: 0;padding: 0;}
+				ul,ol{list-style: none;}
+				body{font-family: "微软雅黑";}
+				.fleft{float: left;}
+				.fright{float: right;}
+				.header{height: 70px;background-image: url(images/lgbj_01.png);width: 100%;position: fixed;top: 0;z-index: 100;}
+				.headlef{height: 70px;background-color: #000000;padding: 0 62px;margin-right:71px;}
+				.headlef img{width: 352px;height: 61px;margin-top: 4px;}
+				.header ul li{float: left;margin-left: 20px;}
+				.header ul li:nth-child(2),.header ul li:nth-child(7),.header ul li:nth-child(8){margin-left: 5px;}
+				.header ul a{width: 66px;color: #FFFFFF;text-align: center;line-height:102px;height:70px;
+				text-decoration: none;font-size: 14px;display: block;}
+				.header ul li:hover a,.header li.active a{background-color: #055846;border-bottom: 5px solid #C09556;line-height: 70px;}
+				.header>p{color: #FFFFFF;font-size:12px ;position: absolute;right: 45px;top: 3px;}
+				.header>p a{color: #FFFFFF;text-decoration: none;}
+				.header>p .lan{color: #C09556;}				
+				.section{background-image: url(imgs/s1.jpg);background-size: cover;}
+				.s2{background-image: url(imgs/s2.jpg);}
+				.s3{background-image: url(imgs/s3.jpg);}
+				.s4{background-image: url(imgs/s4.jpg);}
+				.s5{background-image: url(imgs/s5.jpg);}
+				.s6{background-image: url(imgs/s6.jpg);}
+				.s7{background-image: url(imgs/s7.jpg);}
+				.s8{background-image: url(imgs/s8.jpg);}
+				.s3>img,.s5>img,.s7>img{position: absolute;top: 15%;left: -200%;transition: all 0.5s ;}
+				.s2>img,.s4>img,.s6>img,.s8>img{position: absolute;top: 15%;left: 200%;transition: all 0.5s ;}
+				.s1>img{position: absolute;top:80%;left:70%;transition: all 0.5s;}
+				 .butimg{width:254px;height:186px;position: absolute;left: 70%;top: 200%;padding: 7px;background-color: #0A0B0B;opacity: .8;border-radius: 5px;}
+				 .butimg a{display: inline-block;width:45%;box-sizing:border-box;margin: 5px;margin-bottom: 10px;height: 43%;transition: all 1s ease;border: 5px solid #FFFFFF;overflow: hidden;}
+				 .butimg a img{width: 100%;height:100%;transition: all 1s ease;box-sizing: border-box;display: inline-block;}
+				 .butimg a:hover{transform: scale(1.1,1.1);}
+				 .butimg a:hover img{transform: scale(1.2,1.2);}
+				 .s3 .butimg{width: 366px;left: 20%;}
+				 .s3 .butimg a{width:29.5%}
+				 .s4 .butimg{left: 60%;}
+				 .s5 .butimg,.s7 .butimg{width: 122px;left: 20%;}
+				 .s5 .butimg a,.s7 .butimg a{width:95%}
+				 .s7 .butimg{width: 830px;height: 235px;background-color: #377860;}
+				 .s7 .butimg h1{color: #FFFFFF;font-size: 30px;padding:50px 45px;}
+				 .s8 .butimg{color: #e2b16a;width: 297px;height: 160px;font-size: 12px;padding: 20px;line-height: 20px;left: 20%;}
+				 .s8 .butimg h3{font-size: 14px;}
+			
+				 .s8 h4{color: #e2b16a;font-size: 14px;line-height: 18px;position: absolute;top:70%;left: -200%;font-weight: normal;}
+				.bot{position: fixed;bottom: 2%;left: 50%;z-index: 1000;}
+				.bot a{transition: all 0.5s;display: inline-block}
+				.bot a:hover{transform: scale(1.2,1.2);}
+			</style>
+	</head>
+	<body>
+		<div class="header ">
+			<div class="fleft headlef">
+				<a href=""><img src="images/logo-1_03 (1).png"/></a>
+			</div>
+			<ul>
+				<li data-menuanchor="page1"class="active"> <a href="#page1">首页</a> </li>
+				<li data-menuanchor="page2"> <a href="#page2">世外桃源</a></li>
+				<li data-menuanchor="page3"> <a href="#page3">源生原味</a></li>
+				<li data-menuanchor="page4"> <a href="#page4">星星作伴</a></li>
+				<li data-menuanchor="page5"> <a href="#page5">创想意境</a></li>
+				<li data-menuanchor="page6"> <a href="#page6">闲云圣景</a></li>
+				<li data-menuanchor="page7"> <a href="#page7">活动</a></li>
+				<li data-menuanchor="page8"> <a href="#page8">联系我们</a></li>	
+			</ul>
+			<p><a href="">中文版</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href=""class="lan">ENGLISH</a></p>
+			</div>
+			
+		<div id="fullpage">
+   			<div class="section s1">
+			<img src="demo/images/x1_03 (1).png"/>
+			</div>
+    		<div class="section s2"data-menuanchor="page2">
+				<img src="demo/images/01_03.png"/>
+				<div class="butimg">
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip2"><img src="demo/upload/20141106133043.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip2"><img src="demo/upload/20141106133101.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133106.jpg"data-lightbox="roadtrip2"><img src="demo/upload/20141106133106.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133111.jpg"data-lightbox="roadtrip2"><img src="demo/upload/20141106133111.jpg"title="闲云山"/></a>
+				</div>
+			</div>
+    		<div class="section s3"data-menuanchor="page3">
+			<img src="demo/images/02_03.png"/>
+			<div class="butimg">
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip3"><img src="demo/upload/20141106133043.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip3"><img src="demo/upload/20141106133101.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip3"><img src="demo/upload/20141106133043.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip3"><img src="demo/upload/20141106133101.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133106.jpg"data-lightbox="roadtrip3"><img src="demo/upload/20141106133106.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133111.jpg"data-lightbox="roadtrip3"><img src="demo/upload/20141106133111.jpg"title="闲云山"/></a>
+				</div>
+			</div>
+       		<div class="section s4"data-menuanchor="page4">
+				<img src="demo/images/03_03.png"/>
+				<div class="butimg">
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip4"><img src="demo/upload/20141106133043.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip4"><img src="demo/upload/20141106133101.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip4"><img src="demo/upload/20141106133043.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip4"><img src="demo/upload/20141106133101.jpg"title="闲云山"/></a>
+				</div>
+			</div>
+        	<div class="section s5"data-menuanchor="page5">
+				<img src="demo/images/05_03.png"/>
+				<div class="butimg">
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip5"><img src="demo/upload/20141106133043.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip5"><img src="demo/upload/20141106133101.jpg"title="闲云山"/></a>
+				</div>
+			</div>
+       		<div class="section s6"data-menuanchor="page6">
+				<img src="demo/images/06_03.png"/>
+				<div class="butimg">
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip6"><img src="demo/upload/20141106133043.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133101.jpg"data-lightbox="roadtrip6"><img src="demo/upload/20141106133101.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133106.jpg"data-lightbox="roadtrip6"><img src="demo/upload/20141106133106.jpg"title="闲云山"/></a>
+					<a href="demo/upload/20141106133111.jpg"data-lightbox="roadtrip6"><img src="demo/upload/20141106133111.jpg"title="闲云山"/></a>
+				</div>
+			</div>
+        	<div class="section s7"data-menuanchor="page7">
+				<img src="demo/images/07_03.png"/>
+				<div class="butimg">
+					<h1>活动时间： <br>
+					12月15日至2月15日</h1>
+				</div>
+			</div>
+    		<div class="section s8"data-menuanchor="page8">
+				<img src="demo/images/08_03.png"/>
+				<h4><img src="demo/images/l1 (1).png"/>
+					<p>联系人：张先生<br>
+					        联系电话：010-61670298<br>
+					       手机：010-13581784389<br>
+					       地 址：北京市怀柔区喇叭沟门原始森林公园大门口</p>
+				</h4>
+				<div class="butimg">
+					<h3>公司简介</h3>
+					<p> 北京叠翠谷旅游开发有限公司全资开发建设的闲云山房项目，位于北京市怀柔区喇叭沟门原始森林自然保护区内，总占地面积3000亩，是集生态养殖、种植、餐饮、住宿、观光、会议、健康养生为一体的综合性度假区。拥有自然景观十多处，特色别墅30栋，餐厅1栋，多功能厅1栋。此生态区是北京仅有的非雾霾环境区域，是大自然赐予我们的天然大氧吧。
+                    </p>
+				</div>	
+			</div>
+		</div>
+		<div class="bot">
+				<a href="#page2"><img src="images/gd_03 (1).png"/></a>
+			</div>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.js"></script>
+<script src="js/lightbox.js"></script>
+<script type="text/javascript"src="js/wow.js">
+</script>
+<script type="text/javascript">
+	$(function(){
+		 $('#fullpage').fullpage({
+        'verticalCentered': false,
+        'css3': true,
+      	'menu':'.header',
+        anchors: ['page1', 'page2', 'page3', 'page4','page5','page6','page7','page8',],
+        'navigation': true,
+        'navigationPosition': 'right',
+        'navigationTooltips': ['首页', '世外桃源', '源生原味', '源生原味','星星作伴','创想意境','活动','联系我们'],	
+		onLeave:function(anchorLink,index ){
+			
+			$(".header").css({"opacity": "0.8"});	
+			if(index%2!=0){
+					$(".s"+index+">img").css("left","-200%")
+			}else{
+				$(".s"+index+">img").css("left","200%")
+			}
+			$(".butimg").css("top","200%")
+		},
+		
+		afterLoad:function(anchorLink,index ){
+			$(".bot a").attr("href",anchorLink);
+			if(index==1){
+				$(".header").css({"opacity": "1"});	
+				$(".bot img").attr("src","images/gd_03 (1).png")
+				$(".s1>img").css("left","70%")
+			}else{
+				$(".s"+index+">img").css("left","20%")
+			}
+			if(index==8){	
+				$(".bot img").attr("src","images/gdd_03 (1).png")
+				$(".bot a").attr("href","#page1");
+				$(".s8 h4").animate({"left":"60%",},2000)
+				$(".s"+index+" .butimg").animate({"top":350},1000)
+			}
+			
+			if(index==4){
+				$(".s"+index+" .butimg").animate({"top":150},1000)
+			}else if(index==7){
+				$(".s"+index+" .butimg").animate({"top":250},1000)
+			}else{
+				$(".s"+index+" .butimg").animate({"top":400},1000)
+			}
+			
+		}	
+    })	
+	})
+   
+</script>
+	</body>
+</html>
